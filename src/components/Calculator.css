@@ -1,0 +1,47 @@
+button{
+    width: 3em;
+    height: 3em;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 2em;
+    margin: 0.3em;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.wrapper {
+    background-image: url('../assets/preto.png'); /* Caminho correto para a imagem */
+    background-size: cover; /* Para cobrir todo o espaço */
+    background-position: center; /* Para centralizar a imagem */
+    border-radius: 1em;
+    padding: 1em;
+}
+
+
+.orange{
+    background-color: #FF9500;
+    color: white;
+}
+
+.gray{
+    background-color: #505050;
+    color: white;
+}
+.result{
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1em;
+    font-size:3.5em;
+}
+.scientific-toggle {
+    background-color: #505050;
+    color: white;
+    border: none;
+    border-radius: 2em;
+    margin-top: 0.5em; /* Mover para baixo */
+    
+  }
+  
