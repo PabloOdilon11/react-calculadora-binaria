@@ -1,14 +1,16 @@
-button{
+button {
     width: 3em;
     height: 3em;
     font-size: 1.5em;
     border: none;
     border-radius: 2em;
     margin: 0.3em;
+    transition: all 0.3s ease; /* Para suavizar transições */
 }
 
-button:hover{
+button:hover {
     cursor: pointer;
+    background-color: #d1d1d1; /* Um feedback visual para hover */
 }
 
 .wrapper {
@@ -17,31 +19,88 @@ button:hover{
     background-position: center; /* Para centralizar a imagem */
     border-radius: 1em;
     padding: 1em;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-
-.orange{
+.orange {
     background-color: #FF9500;
     color: white;
 }
 
-.gray{
+.gray {
     background-color: #505050;
     color: white;
 }
-.result{
+
+.result {
     color: rgb(255, 255, 255);
     display: flex;
     justify-content: flex-end;
     margin-right: 1em;
-    font-size:3.5em;
+    font-size: 3.5em;
+    word-wrap: break-word; /* Para garantir que o resultado não ultrapasse a tela */
 }
+
+.expression {
+    color: rgb(255, 166, 0); /* Cor laranja para a expressão */
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1em;
+    font-size: 1.5em;
+    word-wrap: break-word; /* Para que a expressão também se ajuste na tela */
+}
+
 .scientific-toggle {
     background-color: #505050;
     color: white;
     border: none;
     border-radius: 2em;
-    margin-top: 0.5em; /* Mover para baixo */
-    
-  }
-  
+    margin-top: 0.5em;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 600px) {
+    button {
+        width: 2.5em;
+        height: 2.5em;
+        font-size: 1.2em;
+        margin: 0.2em;
+    }
+
+    .wrapper {
+        padding: 0.5em;
+    }
+
+    .result {
+        font-size: 2.5em; /* Ajuste o tamanho do resultado para telas menores */
+        margin-right: 0.5em;
+    }
+
+    .expression {
+        font-size: 1.2em; /* Ajuste o tamanho da expressão */
+    }
+
+    .scientific-toggle {
+        width: 100%;
+        margin-top: 1em; /* Ajuste para dar mais espaçamento na tela pequena */
+    }
+}
+
+/* Responsividade para telas muito pequenas */
+@media (max-width: 400px) {
+    button {
+        width: 2em;
+        height: 2em;
+        font-size: 1em;
+    }
+
+    .result {
+        font-size: 2em;
+        margin-right: 0.2em;
+    }
+
+    .expression {
+        font-size: 1em;
+    }
+}
